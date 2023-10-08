@@ -1,0 +1,18 @@
+/* 
+
+we Have to Tell the Maximum Profit of the Buy
+& sell so We conside minimum and sell at where we
+get maximum Profit 
+*/ 
+
+Public static void BuySell(int Prices[])
+{
+     int mini=prices[0],max=0; 
+        for(int i=1; i<prices.length; i++)
+        {
+            int cost = prices[i]-mini;
+            max = Math.max(max,cost);
+            mini = Math.min(mini,prices[i]);
+        }
+        return max;
+}

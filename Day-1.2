@@ -1,0 +1,49 @@
+/*
+  Pascal's Tringle  have 3 Variation
+
+  1. we have to give Row no.  & then Element and 
+    we have to tell the Ans 
+
+    Solution : 
+     r-1Cc-1  => nCr = n! / (r! * (n-r)!) 
+     r=row , c=column  C=combination(Probablity bala)
+       
+  2.  Given Row no. we have to print whole row
+
+    Solution : 
+    we iterate loop 
+    1 to n // row 
+    and call  Ncr (n-1,c-1); 
+
+
+    Ncr(n,,r)
+     long res = 1;
+
+        // calculating nCr:
+        for (int i = 0; i < r; i++) {
+            res = res * (n - i);
+            res = res / (i + 1);
+        }
+        return res;     
+
+
+    3. Print Pascal Tringle   Code   
+
+    // Ncr method As in 2 Variation
+
+    public static List<List<Integer>> pascalTriangle(int n) {
+        List<List<Integer>> ans = new ArrayList<>();
+
+        // Store the entire Pascal's triangle:
+        for (int row = 1; row <= n; row++) {
+            List<Integer> tempLst = new ArrayList<>(); // temporary list
+            for (int col = 1; col <= row; col++) {
+                tempLst.add(nCr(row - 1, col - 1));
+            }
+            ans.add(tempLst);
+        }
+        return ans;
+
+
+
+*/

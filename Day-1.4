@@ -1,0 +1,28 @@
+/* 
+ Kadan's Algoritham Basically Used for the finding 
+ the Maximum sum in the SubArray its Applicable when 
+ not all element is negetive (Sum Positive must).
+*/
+ public static void MaximumSum(int arr[])
+ { 
+    int start =0 , end =0 , maxi=0, sum=0;
+for(int i=0; i<n; i++)
+{
+    sum +=arr[i];
+
+    if( sum>maxi)
+    {
+        maxi = Math.max(sum , maxi); 
+        end=i;
+    }
+    if(sum<0)
+    {
+        sum=0; 
+        start = i+1;
+    }
+  } 
+ 
+    return {start ,end}(measn SubArray return)
+
+    return maxi ; // SubArray sum return
+ }
