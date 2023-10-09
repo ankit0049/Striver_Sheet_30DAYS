@@ -17,4 +17,22 @@ Day-1 have total 6 Problem  take Reference From code , Click on the Problem  & S
 * [Next Permutaion](https://leetcode.com/problems/next-permutation/)
 * [Kadan's Algoritham](https://leetcode.com/problems/maximum-subarray/)
 * [Sort the 0's ,1's & 2's](https://leetcode.com/problems/sort-colors/)
-* [Stock By & Sell](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) 
+* [Stock By & Sell](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
+
+----
+---  
+> ## Today was my revision day, but I ended up completing half of the goals for the next day as well. I'll finish the remaining half tomorrow as well as i am do revision.  
+
+> ## Day 2 
+
+Day-2  Total Problem = 6 
+
+* [Rotate Matrix](https://leetcode.com/problems/rotate-image/) 
+
+* [Merge Interval Overlapping](https://leetcode.com/problems/merge-intervals/) 
+
+* [Merge two Arrays In Sorted Order](https://leetcode.com/problems/merge-sorted-array/)  
+
+* [Find Repeating Number](https://leetcode.com/problems/find-the-duplicate-number/) 
+
+

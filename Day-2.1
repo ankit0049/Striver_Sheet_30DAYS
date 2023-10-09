@@ -1,0 +1,35 @@
+/*
+  Approach 1: Take another dummy matrix of n*n, and then take the 
+  first row of the matrix and put  it in the last column of the dummy
+   matrix, take the second row of the matrix, and put it in the 
+   second last column of the matrix and so.
+
+ Approach 2 (Optimal) :
+  Step 1: Transpose the matrix. (transposing means changing columns to rows and rows to columns)
+  Step 2: Reverse each row of the matrix.
+*/ 
+
+public static void RotateMatrix(int matrix[][])
+{
+   for (int i = 0; i < matrix.length; i++) {
+            for (int j = i; j < matrix[0].length; j++) { 
+
+            swap(matrix, i, j);
+
+              
+            }
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length / 2; j++) {
+                int temp = 0;
+                temp = matrix[i][j];
+                matrix[i][j] = matrix[i][matrix.length - 1 - j];
+                matrix[i][matrix.length - 1 - j] = temp;
+            }
+        }
+}
+ public static void swap(int matrix[][], int i, int j) {
+    int temp = matrix[i][j];
+    matrix[i][j] = matrix[j][i];
+    matrix[j][i] = temp;
+}
