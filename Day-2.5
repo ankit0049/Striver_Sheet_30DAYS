@@ -1,0 +1,92 @@
+Approach 1: 
+Naive Approach is iterate 2 loops 
+and check arr[i]>arr[j] count++ 
+
+
+
+ Approach 2 : this Approach is Basically Based on the Merge 
+ Sort Useally we sort using the comparision and then merge if 
+ we compared our left part with the right part then if our left 
+ lowest value is greter then right so count is going to be plus
+  equal the length of the left part 
+
+ >          [1 9  3 5 10] 
+             /          \
+         [1 9 3]       [ 5 ,10]
+         /    \          /  \
+        [1 9]  [3]      [5]  [10]
+        /    \
+        [1]  [9]  
+
+
+        [1 , 9 , 3 ,5 ,10]
+            /           \
+         [1 9 3]       [ 5 ,10]
+         /    \          /  \
+        [1 9]  [3]      [5]  [10]
+        /    \
+        [1]  [9]  // this going to be combine . if 1 > 9 then count is 
+        increse by left part length but its not true   so count remain same.
+
+        likewise we combine likw our calls happens and we check if the left part 
+        lowest value is greter then the right part increse by length of left[mid-cnt+1]
+         if the left lowest is smaller then we increre the count and then check
+          (increse the count means we check using Next index value because our Array part is sorted Now) 
+
+        [1 , 9]  [ 3]  here 1 > 3 false so we increse the
+         count and now our counter point to 9 ( value) then check 9>3 
+         increse the count and merge [1 ,3 ,9]  likewise all calls Happens  
+ Approach 2 : code below 
+
+
+ Public Static int MergeSort(int arr[], int low , int mid ,int high)
+ {   ArrayList<Integer> ans = new ArrayList();
+     int left=low; 
+     int right=mid+1;  
+     int count=0;
+    while(left<=mid && right<=high)
+    {
+        if(arr[left]<arr[right]) 
+        {  ans.add(arr[left]);
+            left++;
+        } 
+        else 
+        {  ans.add(arr[right]);
+            count+=mid-left+1; 
+            right++ 
+
+        }
+    } 
+
+
+    while(left<=mid)
+    {
+         ans.add(arr[left]);
+            left++;
+    } 
+    while(right<=high)
+    {
+        ans.add(arr[right]);
+            count+=mid-left+1; 
+            right++ 
+    } 
+
+    return count;
+ } 
+
+ Public Static int  Merge(int arr[] , int low , int high)
+ {
+    if(low>=high)
+    {
+        return;
+    } 
+    int mid = low+(high-low)/2;
+    cnt+=Merge(arr,low.mid);
+    cnt+=Merge(arr,mid+1,high); 
+    cnt+=MergeSort(arr,low ,mid,high); 
+    return  cnt ;
+ }
+
+ 
+
+ 

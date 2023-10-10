@@ -36,3 +36,9 @@ Day-2  Total Problem = 6
 * [Find Repeating Number](https://leetcode.com/problems/find-the-duplicate-number/) 
 
 
+* [Count Inversions](https://www.codingninjas.com/studio/problems/count-inversions_615)  
+
+* [Repeating & Missing Number](https://www.interviewbit.com/problems/repeat-and-missing-number-array/)  
+
+
+
