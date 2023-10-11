@@ -38,7 +38,18 @@ Day-2  Total Problem = 6
 
 * [Count Inversions](https://www.codingninjas.com/studio/problems/count-inversions_615)  
 
-* [Repeating & Missing Number](https://www.interviewbit.com/problems/repeat-and-missing-number-array/)  
+* [Repeating & Missing Number](https://www.interviewbit.com/problems/repeat-and-missing-number-array/)   
+
+---
+---
+
+> ## Day-3 
+ Day-3  Total Problem = 6
+
+ * [Search Target In 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) 
+
+ * [Power of x is n](https://leetcode.com/problems/powx-n/)
+
 
 
 
