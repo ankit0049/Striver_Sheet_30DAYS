@@ -1,0 +1,111 @@
+Approach 1 : 
+we just Use 2 loops 
+and check all number frequncy count 
+and together we check if frequncy is 
+greater then (N/2) then Print. 
+
+Time Complexity O(n^2)  Space O(1)
+
+Approach  2 : 
+
+Here We Use Hashing . 
+we can use Array Hashing but here 
+we have to return the element also 
+so we use hashmap . we iterate and store
+and check if frequncy is (>N/2) then 
+print that element .  
+
+Time Complexity : O(n)(iteration) o(logn)(hashmap iteration) 
+                  O(nlogn)
+
+Space : O(n)
+
+
+
+Approach 3 : 
+ 
+
+ Here We Use The Maximum Voting 
+ technique . to find the repeted element 
+ is greate then N/2 or not . 
+
+We Undersatnd using the Execution
+[1 , 3 ,3,9 ,1 ,3 ,1,1,9,1,1 ]
+we start with one elemnt = arr[0]
+if we got same elemnt so increse the count 
+otherwise decrease the count.
+if our count beccome Zero we update the element 
+and frequncy as 1 then iterate next .
+
+at the last we have frequncy>0 then we 
+check for that element count and return if greater then N/2.
+
+
+The intitution is 
+i=0 : count=1 element =1
+i=1 : count=0 element =3  
+// here when 0 occur that time we 
+get new element with 1 count.
+i=2 : count=2 element =3 
+i=3 : count=1 element =3 
+i=4 : count=0 element =3 
+i=5 : count=0 element =1 
+i=6 : count=2 element =1 
+i=7 : count=1 element =1 
+i=8 : count=2 element=1
+i=9 : count=3 element=1 
+
+
+here the Only possiblites of repeating 
+> N/2 is 1 by these iteartion . 
+
+
+Question comes how do you know 
+that is Possible Answer other not .
+
+when i=4 means length is 5 am i right 
+i=4 count=0 means here repeted no. can be
+equal to the length/2 not greater 
+beacuse here count 0 means repeted & non repeating
+no. frequncy is same that's why here 
+we get the 0. likewise we increse our length 
+and the same Approach on icresing length
+at the last we have to check manually that element 
+is repeted (>N/2) or not.
+
+
+
+If You Have Diffculties to Undersatnd Copy this 
+and paste into chatgpt that explain 
+each term & line also Approach.
+
+
+Code : 
+
+public static void GreaterN/2( int arr[] , int n)
+{
+    int element = arr[0], count=1;
+    for(int i=1; i<n; i++)
+    {   if(count==0)
+         {
+            element = arr[i];
+            count = 1;
+         }
+        if(arr[i]==element)
+        {
+            count++;
+        }
+        else 
+        {
+            count--;
+        }
+    }
+    int manuallyCount =0; 
+    for(int i=0; i<n; i++)
+    {
+        if(element==arr[i])
+        count++;
+    } 
+
+    if(element>n/2)return element;
+}

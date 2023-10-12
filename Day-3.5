@@ -1,0 +1,56 @@
+Approach 1 :
+
+this is the Brute Force approach chek all posibble way 
+and return the Possible Path count .
+We Do this using Recursion .
+
+we can Only Move Right Or Down .
+if we start at the (0 , 0) then the base case 
+is Ending(m-1, n-1) point . if we reach this return 1 
+otherwise return 0;
+
+public static void Path(int i , int j, int mat[][])
+{
+    if(i=m-1 && j = n-1)
+    {
+        return 1; 
+    }
+    if(i>m-1 || j>n-1)return 0;
+
+    else return Path(i+1,j,mat)+(i,J+1 , mat);
+} 
+
+
+Approach 2 : 
+
+Here Only Reduce the Overlapped Problem . Using the Dp array .
+
+public static void Path(int i , int j, int mat[][] , int ans[][])
+{
+    if(i=m-1 && j = n-1)
+    {
+        return 1; 
+    }
+    if(i>m-1 || j>n-1)return 0;
+     if(ans[i][j]!=-1) return ans[i][j];
+    else return ans[i][j] =Path(i+1,j,mat)+(i,J+1 , mat);
+}  
+
+
+
+Approach 3 : 
+
+Combinatory Form 
+You have to Analyze that for Every Path You to take same 
+no. of steps this is find by (m+n -2) & now its comes 
+to find these step can structure in how many ways you can return 
+any one. 
+
+ int N = m+n-2; 
+        int r = m-1;
+        double ans =1;
+        for(int i =1; i<=r; i++)
+        {
+            ans = ans*(N-r+i)/i;
+        }
+        return (int)ans;

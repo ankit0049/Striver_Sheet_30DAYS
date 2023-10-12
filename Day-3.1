@@ -1,0 +1,57 @@
+Approach 1 : 
+Use Linear Search and Check the 
+element is  Present or not if Present then rtuen true 
+otherwise return false .
+
+Time Complexity o(mXn).
+Space Complexity o(1).
+
+
+Approach 2 : 
+In Addition To the first Approach 
+we iterate only for row as we Know 
+the matrix is sorted so we check this
+row have element if yes then we pass 
+that row in BinarySearch and get the 
+elemnt present or Not.
+
+Timw Complexity : o(n)Xo(logn)=>o(nlogn)
+
+
+Approach 3 :
+In Addition to 2 Approach we set 
+the low and high then check mid 
+is the answer or left , right part is our 
+answer. Hypothetically we flatten 
+the 2D matrix into 1D . and Get the 
+intitution . 
+
+Approach 3 Code below 
+
+
+public static void BinarySearch(int mat[][] , int target)
+{
+    int st =0 ; 
+    int e = n+m-1;
+    while(st<=e)
+    {
+        mid = (st + (e-st)/2);
+        int row = (mid/m) // m is column length
+        int col = (mid%m)
+
+        if(mat[row][col]==target)
+        {
+        return true;
+        }
+        else if(mat[row][col]<target)
+        {
+            st = mid+1;
+        }  
+
+        else 
+        {
+           e= mid-1;
+        }
+    } 
+    return -1;
+}

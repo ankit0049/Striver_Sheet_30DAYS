@@ -1,6 +1,6 @@
 > # 30 Days SDE Sheet Challange   
  
-> ### If you're seeking an explanation for these problems, I encourage you to visit my repository [100_DAYS_Code](https://github.com/ankit0049/100_Days_Code). or Checked it Out Striver SDE Sheet .
+> ### If you're seeking an explanation for these problems, I encourage you to visit my repository [100_DAYS_Code](https://github.com/ankit0049/100_Days_Code). or Checked it Out Striver SDE Sheet  or Open My Day wise Problem there Also Approach Explanation Avilabel .
 
 i have a solid understanding of fundamental concepts like Array,  Searching , Sorting , String manipulation, HashMaps, Recursion, as well as more advanced topics including LinkedLists, Sets, Stacks, Queues, Trees, and an ongoing journey with Dynamic Programming .  So i take this Challnge and Increse My Practicle Concepts because i have Done Theroticals Already.  
 
@@ -50,6 +50,13 @@ Day-2  Total Problem = 6
 
  * [Power of x is n](https://leetcode.com/problems/powx-n/)
 
+* [Majority Element is Greater N/2 times ](https://leetcode.com/problems/majority-element/)
 
+* [Majority Element is Greater
+N/3 times](https://leetcode.com/problems/majority-element-ii/) 
 
+* [Majority Element is Greater N/3 times]( https://leetcode.com/problems/majority-element-ii/submissions/) 
 
+* [Grid Unique Path](https://leetcode.com/problems/unique-paths/) 
+
+* [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
