@@ -1,0 +1,47 @@
+Approach 1  :
+This Is the Brute Force Approach here i am use 
+the all possible pair that make Target 
+and then return  the that index who's sum is Equal 
+to target. 
+
+for(int i=0; i<n; i++)
+{
+    for(int j=i+1; j<n; j++)
+    {
+        if(arr[i]+arr[j]==target)
+        return {i,j};
+    }
+} 
+
+Time Complexity O(n^2) 
+
+
+Approach 2 :  
+This is The better Approach for this 
+here we Use HashMap and store all the arr value
+with their existing index value.
+Now we Check target-arr[i] if avilabel on 
+HashMap mens this the First possible and the 
+contain in HashMap is Anthore One we get that 
+and this and return . 
+
+Time Complexity O(n)
+Space Complexity O(n)
+
+  int first = 0,second=0;
+        HashMap<Integer,Integer> hm = new HashMap();
+
+        for(int i=0 ; i<nums.length; i++)
+        {
+
+            if(hm.containsKey(target-nums[i]))
+            {
+                second = hm.get(target-nums[i]);
+                first=i;
+            } 
+            else
+            {
+                hm.put(nums[i],i);
+            }
+        } 
+        return new {first,second};

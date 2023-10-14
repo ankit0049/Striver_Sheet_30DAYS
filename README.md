@@ -59,4 +59,21 @@ N/3 times](https://leetcode.com/problems/majority-element-ii/)
 
 * [Grid Unique Path](https://leetcode.com/problems/unique-paths/) 
 
-* [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
+* [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) 
+
+## Day 4
+
+* [2 Sum Problem](https://leetcode.com/problems/two-sum/) 
+
+* [4 Sum Problem](https://leetcode.com/problems/4sum/)
+
+* [Longest Consucutive SUbsequence](https://leetcode.com/problems/longest-consecutive-sequence/) 
+
+* [Largest SubArray with Sum k](https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1) 
+
+* [Count SubArrays with Given Sum Xor K ](https://www.interviewbit.com/problems/subarray-with-given-xor/)
+
+* [Longest Substring Without Repeat](https://leetcode.com/problems/longest-substring-without-repeating-characters/) 
+
+---
+---
