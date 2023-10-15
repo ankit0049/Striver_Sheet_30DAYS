@@ -1,0 +1,77 @@
+Approach 2:(Positive & Negetive Element (Not work for Zeros)) 
+
+Initially sum = 0, max = 0
+HashMap<Integer, Integer> h = [ ];
+i=0 -> sum=1, sum!=0 so check in the hashmap if we’ve seen a subarray with this sum before, in our case hashmap does not contain sum (1), so we add (sum, i) to the hashmap.
+h = [[1,0]]
+i=1 -> sum=3, sum!=0 so check in the hashmap if we’ve seen a subarray with this sum before, in our case hashmap does not contain sum (3), so we add (sum, i) to the hashmap.
+h=[[1,0], [3,1]] 
+i=2 -> sum=1, sum!=0 so check in hashmap if it contains sum, in our case hashmap contains sum (1)
+Here we can observe that our current sum is seen before which concludes that it’s a zero subarray. So we now update our max as maximum(max, 2-0) => max = 2
+h=[[1,0], [3,1]]
+i=3 -> sum=5, sum!=0 so check in hashmap if it contains sum, in our case hashmap does not contain sum (5), so we add (sum, i) to hashmap.
+h=[[1,0], [3,1], [5,3]] 
+i=4 -> sum=1, sum!=0 so check in hashmap if it contains sum, in our case hashmap contains sum (1). Here we can again observe our above-discussed case, So we now update our max as maximum(max, 4-0) => max = maximum(2, 4) = 4  
+h=[[1,0], [3,1], [5,3]] 
+Now that we have traversed our whole array, our answer is max = 4, Subarray = {2, -2, 4, -4} 
+
+   HashMap<Integer, Integer> mpp = new HashMap<Integer, Integer>();
+
+        int maxi = 0;
+        int sum = 0; 
+
+        for(int i = 0;i<n;i++) {
+
+            sum += A[i]; 
+
+            if(sum == 0) {
+                maxi = i + 1; 
+            }
+            else {
+                if(mpp.get(sum) != null) {
+
+                    maxi = Math.max(maxi, i - mpp.get(sum)); 
+                }
+                else {
+
+                    mpp.put(sum, i); 
+                }
+            }
+        }
+        return maxi; 
+
+Approach 3 : (Positive & Zeros)
+
+We take Two Pointer Left & right =0 
+ans start the until right < n and 
+we Increse right++ and take sum+=arr[right]
+
+if(the sum==target) take length and check is this max 
+
+if(sum>target) until remove arr[left] until our 
+sum become <= target    
+
+
+code : 
+
+Public static void LongestWithSubArraySumK(int arr[] , int k)
+{
+    long sum = arr[0]; 
+    int maxLength =0 ;  
+    int left =0 , right=0;
+    while(right<n)
+    {
+        right++;  
+        while(right<n && sum>k)
+        {
+            sum=-arr[left];
+            left++;
+        } 
+        if(sum==k)
+        {
+            maxlen = max(maxlen , right-left+1);
+        }
+        if(right<n ) sum+=arr[right]; right++;
+
+    }
+}

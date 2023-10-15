@@ -1,0 +1,43 @@
+Approach 1:  
+Brute FOrce iterate 
+3 loops or 2 loops and check Avilabel
+Consucutive number count and return
+the maximum Count .
+
+
+Approach 2 : 
+To begin with we sort the array 
+and check the Most Consucutive Number
+and return the max Consucutive one.
+
+Arrays.sort(arr);
+for(int i=1; i<n ; i++)
+{  if(arr[i]==arr[i-1]) continue;
+    if(arr[i]==arr[i-1]-1)
+    {
+        cnt++;
+    }
+    maxi = max(maxi , cnt);
+}
+
+Time Complexity O(nlogn)+ O(n) => O(nlogn)
+
+
+Approach 3 :
+ We consider HashSet here 
+ and push all element into HashSet 
+ then we start iterating check is this start point 
+ (if element-1 is not in HashSet means its starting point )
+ we start one loop and check until we get element+1 in HashSet
+
+ for(int i=0; i<n; i++)
+ {
+    if(!Set.contains(arr[i]-1))
+    { cnt=1;
+        while(arr[i]==(arr[i]+1))
+        {
+          cnt++;
+        }
+        maxi = max(maxi , cnt);
+    }
+ }
