@@ -1,0 +1,26 @@
+Approach : 
+
+We Iterate on the Linkedlist 
+to begin with we make one dummy node = null 
+
+and store the next address and head point to dummy node 
+and update the head = next likewise 
+we Iterate on whole linkedlist so that head goes at the end and link 
+is reverse pointed so We get Recrsed LinkedList 
+
+
+Code 
+
+
+Public static void LikedReverse(Node head)
+{
+ Node dummy = null ;
+ while(head!=null)
+ {
+    Node next = head.next; 
+    head.next=dummy;
+    dummy = head;
+    head = next;
+ } 
+ return head;
+}

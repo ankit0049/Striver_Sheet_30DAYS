@@ -77,3 +77,14 @@ N/3 times](https://leetcode.com/problems/majority-element-ii/)
 
 ---
 ---
+## Day 5 
+
+* [Reverse LinkedList](https://leetcode.com/problems/reverse-linked-list/)
+
+* [Middle Of the LinkedList](https://leetcode.com/problems/middle-of-the-linked-list/) 
+
+* [Merge 2 sorted list Merge] (https://leetcode.com/problems/merge-two-sorted-lists/)
+
+* [Remove Nth Node from thr BAcj](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+
+* [Add Two List & Repeat](https://leetcode.com/problems/add-two-numbers/)

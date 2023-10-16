@@ -1,0 +1,44 @@
+Approach 1 : 
+To Connect with the Solution of This Problem
+We just Calculate the Number of Node Count and remove with 
+given deleted node so we get Some Number we iterate loop
+ubtil that point reaches and just set the point = point.next.next 
+
+this gives the deleted element in the linkedlist. 
+
+while(temp!=null)
+{
+    count++;
+    head=head.next;
+}
+
+while(index<=count-given)
+{
+    dummy=dumm.next;
+}
+dumm = dummy.Next.next;
+
+
+
+Approach 2: 
+
+here again we Use the tortoise method where we 
+first iterate the until our fast get the index==deleted
+
+then we start to move slow and fast as we hit fast==null
+we  get that element and just do dumm = dummy.Next.next; and 
+return ; 
+
+
+while(i<deleted)
+{
+    fast=fast.next;
+    cnt++;
+}
+while(fast.next!=null)
+{
+    fast=fast.next;
+    slow = slow.next;
+} 
+slow = slow.next.next;
+return head;
