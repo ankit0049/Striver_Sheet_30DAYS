@@ -1,0 +1,51 @@
+Approach 1 : 
+We store Linkedlist element in Array (respectively)
+and check the Array is PAlindtrome or not if it is .
+means the Linked list is also Palindrome.
+
+
+Approach 2 :
+
+ step : 
+
+we find the mid using the Tortoise 
+method 
+slow & fast pointer 
+
+our slow point to mid
+if(even length)=> slow=slow.next and reverse it
+and then take dummy1 =head and start check dummy1==slow
+until slow become null 
+if condition not met then return the false 
+
+
+Approach 2 code Below
+ public static boolean isPalindrome(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        // Find the midpoint
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Adjust for even length
+        if (fast != null) {
+            slow = slow.next;
+        }
+
+        // Reverse the second half
+        slow = reverseList(slow);
+
+        // Check for palindrome
+        while (slow != null) {
+            if (head.val != slow.val) {
+                return false;
+            }
+            head = head.next;
+            slow = slow.next;
+        }
+
+        return true; 
+ }

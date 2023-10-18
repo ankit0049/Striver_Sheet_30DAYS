@@ -1,0 +1,32 @@
+Approach 1 : 
+Using THe HashMap we Store The Node not the Value
+and iterate on list if we getting same on HashMap
+means Cycle Exists if our Loop break bu condition 
+getting null means there is no loop in Linked list.
+
+
+
+Approach 2 : 
+Tortoise Approach 
+here We have 2 Pointer Slow & Fast 
+slow one Move BY 1 step 
+fast one Move BY 2 step likewise
+if we get slow == fast then cycle is
+present if not means we hit the condition of getting
+null and break the loop;
+
+Public static void Find(Node head)
+{
+    Node slow = head;
+    Node fast = head;
+    while(fast!=null && fast.next!=null)
+    {
+        if(fast==slow)
+        {
+            return true;
+        } 
+
+        fast=fast.next.next;
+        slow = slow.next;
+    } return false;
+}

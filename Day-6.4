@@ -1,0 +1,61 @@
+Approach 1 :In This Approach We are Going to use 
+the Hashmap Approach and we Store the Node & check that node ocuur 
+again means that the loop point we return that point .
+
+This Approach takes o(n) time & space Complexity both.
+
+static Node detectCycle(Node head) 
+    HashSet<Node> st=new HashSet<>();
+    while(head != null) {
+        if(st.contains(head)) return head;
+        st.add(head);
+        head = head.next;
+    }
+    return null;
+
+Approach 2 : 
+
+Step 1 : 
+Detect the Cycle.
+We use the slow & Fast pointer for the Detecting the cycle
+if we got (slow==fast) means cyle present then 2 step comes up.
+
+Step 2:  
+entry node = head & slow remain same position now we start iterate
+& check until we get the same value entry==slow
+as we hit then condition that's the cycle point in linkedlist.
+
+
+Approach 2 code :
+
+    public static ListNode detectCycleEntry(ListNode head) {
+        // Step 1: Detect the Cycle
+        ListNode slow = head;
+        ListNode fast = head;
+        boolean hasCycle = false;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
+                hasCycle = true;
+                break;
+            }
+        }
+
+        if (!hasCycle) {
+            return null; // No cycle detected
+        }
+
+        // Step 2: Set Entry Node
+        ListNode entry = head;
+
+        // Step 3: Iterate Until Entry == Slow
+        while (entry != slow) {
+            entry = entry.next;
+            slow = slow.next;
+        }
+
+        return entry; // Entry point of the cycle
+    }

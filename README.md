@@ -87,4 +87,20 @@ N/3 times](https://leetcode.com/problems/majority-element-ii/)
 
 * [Remove Nth Node from thr BAcj](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
-* [Add Two List & Repeat](https://leetcode.com/problems/add-two-numbers/)
+* [Add Two List & Repeat](https://leetcode.com/problems/add-two-numbers/)  
+---
+---
+
+## Day 6 
+
+* [InterSection Of the Two LinkedList](https://leetcode.com/problems/intersection-of-two-linked-lists/) 
+
+* [Detect Cycle in Linkedlist](https://leetcode.com/problems/linked-list-cycle/) 
+
+* [Check LinkedList Palindrome or Not](https://leetcode.com/problems/palindrome-linked-list/) 
+
+* [First Position Of the Cycle](https://leetcode.com/problems/linked-list-cycle-ii/) 
+
+* [Flatten the LinkedList](https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1)
+
+* [Pending 6.5 (revision)& 6.6 whole](https://leetcode.com/problems/reverse-nodes-in-k-group/)
